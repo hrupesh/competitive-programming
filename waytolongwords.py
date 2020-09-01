@@ -5,5 +5,6 @@ words = []
 for i in range(n):
     t = input()
     words.append(t)
+    print(words[i])
 
 print(words)
