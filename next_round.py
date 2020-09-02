@@ -1,8 +1,6 @@
 n, k = input().split()
-contestants = []
-n= int(n)
-
-for i in range(n):
-    contestants.append(input())
+# contestants = []
+n = int(n)
+contestants = (input().split())
 
 print(contestants)
