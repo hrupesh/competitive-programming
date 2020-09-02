@@ -1,3 +1,5 @@
+import sys
+
 n, k = input().split()
 # contestants = []
 n = int(n)
@@ -6,9 +8,9 @@ contestants = (input().split())
 advanced = 0
 try:
     l = int(contestants[k])
-# print(l)
+    # print(l)
 except:
-    print("Error")
+    sys.exit()
 
 for i in contestants:
     i = int(i)
