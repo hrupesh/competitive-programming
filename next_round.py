@@ -10,6 +10,8 @@ try:
     l = int(contestants[k])
     # print(l)
 except:
+    advanced = n
+    print(advanced)
     sys.exit()
 
 for i in contestants:
