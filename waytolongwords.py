@@ -16,13 +16,16 @@ for i in range(n):
     words.append(t)
     # print(words[i])
 
+new_words = []
 
 for i in words:
     if(len(i) > 10):
         i = converttoabbr(i)
-        print(i)
+        new_words.append(i)
+    else:
+        new_words.append(i)
     # print("\n")
-print(words)
+print(new_words)
 
 
 # c = input()
