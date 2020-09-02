@@ -7,7 +7,7 @@ k = int(k)
 contestants = (input().split())
 advanced = 0
 try:
-    l = int(contestants[k])
+    l = int(contestants[k-1])
     # print(l)
 except:
     advanced = n
