@@ -9,7 +9,8 @@ l = int(contestants[k])
 
 for i in contestants:
     i = int(i)
-    if(i >= l):
+    # print(i)
+    if(i >= l and i != 0):
         advanced = advanced + 1
 
 print(advanced)
