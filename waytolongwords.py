@@ -4,9 +4,9 @@ words = []
 
 
 def converttoabbr(a):
-    print(a[0])
+    # print(a[0])
     b = a[::-1]
-    print(b[0])
+    # print(b[0])
     new = a[0] + str(len(a) - 2) + b[0]
     return new
 
@@ -25,7 +25,9 @@ for i in words:
     else:
         new_words.append(i)
     # print("\n")
-print(new_words)
+# print(new_words)
+for i in new_words:
+    print(i)
 
 
 # c = input()
