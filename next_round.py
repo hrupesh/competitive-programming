@@ -4,8 +4,11 @@ n = int(n)
 k = int(k)
 contestants = (input().split())
 advanced = 0
-l = int(contestants[k])
+try:
+    l = int(contestants[k])
 # print(l)
+except:
+    print("Error")
 
 for i in contestants:
     i = int(i)
