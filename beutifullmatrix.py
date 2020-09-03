@@ -4,6 +4,7 @@ for i in range(5):
     matrix.append(m)
 
 index_i = 1
+pos_i = 0
 pos_y = 0
 
 for i in matrix:
@@ -25,7 +26,7 @@ def calc_i():
         print("In 1 5 for x")
         return 2
     elif(pos_i == 2 or pos_i == 4):
-        print("In 1 5 for x")
+        print("In 2 4 for x")
         return 1
     elif(pos_i == 3):
         print("In 3 for x")
