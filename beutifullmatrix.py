@@ -19,12 +19,16 @@ moves = 0
 
 def calc_i():
     if(pos_i == 1 or pos_i == 5):
-        print("In 1 5  for i")
+        print("In 1 5 for x")
         return 2
     elif(pos_i == 2 or pos_i == 4):
-        print("In 2 4 for i")
+        print("In 1 5 for x")
         return 1
+    elif(pos_i == 3):
+        print("In 3 for x")
+        return 0
     else:
+        print("In else for x")
         return 0
 
 
@@ -45,6 +49,9 @@ def calc_y():
 
 moves_i = calc_i()
 moves_j = calc_y()
+
+print(moves_i)
+print(moves_j)
 
 moves = moves_i + moves_j
 
