@@ -18,7 +18,7 @@ moves = 0
 
 if(index_x == 1 or index_x == 5):
     moves = 2
-elif(index_x == 2 or index_x=4):
+elif(index_x == 2 or index_x == 4):
     moves = 1
 elif(index_x == 3):
     moves = 0
