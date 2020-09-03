@@ -17,17 +17,14 @@ for i in matrix:
 moves = 0
 
 if(pos_i == 1 or pos_i == 5):
-    moves = 2
+    moves = moves + 2
     print("In 1 5  for i")
 elif(pos_i == 2 or pos_i == 4):
-    moves = 1
+    moves = moves + 1
     print("In 2 4 for i")
-elif(pos_i == 3):
-    pass
-    print("In 3 for i")
 else:
-    pass
-    print("In else for i")
+    moves = 0
+
 
 if(pos_y == 0 or pos_y == 8):
     moves = moves + 2
