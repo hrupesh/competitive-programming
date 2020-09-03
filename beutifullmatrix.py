@@ -3,7 +3,7 @@ for i in range(5):
     m = input()
     matrix.append(m)
 
-pos_i = 1
+pos_i = 0
 pos_y = 0
 
 for i in matrix:
@@ -13,6 +13,8 @@ for i in matrix:
         pos_y = i.find("1")
         print(pos_y)
     pos_i = pos_i + 1
+
+print(pos_i)
 
 moves = 0
 
