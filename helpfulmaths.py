@@ -1,3 +1,4 @@
 s = input()
 # s = int(s, base=36)
-print(s)
+# for i in range(s.count)
+print(s.count("1"))
