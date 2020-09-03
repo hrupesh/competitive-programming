@@ -7,4 +7,9 @@ for i in range(len(s)):
         print(s[i])
 
 sorted_s = sorted(sorted_s)
-print(sorted_s)
+
+new_s = ""
+for i in sorted_s:
+    new_s = new_s + i + "+"
+
+print(new_s)
