@@ -8,11 +8,11 @@ for i in range(n):
     statements.append(s)
 
 for stmt in statements:
-    switch(stmt):
-        case("X++" or "++X"):
-            x = x + 1
-        case("X--" or "--X"):
-            x = x - 1
+    if(stmt == "X++" or stmt == "++X"):
+        x = x + 1
+    elif(stmt == "X--" or stmt == "--X"):
+        x = x - 1
+    else:
+        pass
 
-
-print(statements)
+print(x)
