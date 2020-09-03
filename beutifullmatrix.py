@@ -3,16 +3,17 @@ for i in range(5):
     m = input()
     matrix.append(m)
 
-pos_i = 0
+index_i = 1
 pos_y = 0
 
 for i in matrix:
     if("1" in i):
+        pos_i = index_i
         print(pos_i)
         # print(i.find("1"))
         pos_y = i.find("1")
         print(pos_y)
-    pos_i = pos_i + 1
+    index_i = index_i + 1
 
 print(pos_i)
 
