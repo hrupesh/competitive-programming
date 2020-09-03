@@ -1,3 +1,5 @@
 m, n = input().split()
-area = m*n
+m = int(m)
+n = int(n)
+area = int(m*n/2)
 print(area)
