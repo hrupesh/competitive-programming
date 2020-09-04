@@ -16,16 +16,19 @@ for i in range(len(a)):
 
 def move(moves):
     for i in range(n):
-        # print(i+1)
+        print(i+1)
         moves = moves + 1
         if(i+1 == new_a[0]):
             new_a.pop(0)
-            if(new_a[1]):
-                if(i+1 == new_a[1]):
-                    new_a.pop(1)
+            # print(new_a)
+            # print(len(new_a))
             # print("Popping")
             if(len(new_a) == 0):
                 return moves
+        if(len(new_a) > 1):
+            if(i+1 == new_a[1]):
+                new_a.pop(1)
+            print("In 1")
 
     if(len(new_a) == 0):
         return moves
