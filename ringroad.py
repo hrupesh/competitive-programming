@@ -4,6 +4,12 @@ m = int(m)
 
 a = input()
 
+print(a)
+
+a = a.split()
+
+print(a)
+
 new_a = []
 
 for i in range(len(a)):
