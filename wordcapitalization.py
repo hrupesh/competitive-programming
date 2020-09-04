@@ -1,6 +1,9 @@
 w = input()
+new_w = ""
 for i in range(len(w)):
     if(i == 0):
-        w[i] == w[i].upper
-    
-print(w)
+        new_w = new_w + w[i].upper()
+    else:
+        new_w = new_w + w[i]
+
+print(new_w)
