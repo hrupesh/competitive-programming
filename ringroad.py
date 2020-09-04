@@ -19,15 +19,16 @@ def move(moves):
         print(i+1)
         moves = moves + 1
         if(i+1 == new_a[0]):
+            if(len(new_a) > 2):
+                if(i+1 == new_a[2]):
+                    print("Popping same consecutive 2")
+                    new_a.pop(2)
+            if(len(new_a) > 1):
+                if(i+1 == new_a[1]):
+                    print("Popping same consecutive")
+                    new_a.pop(1)
             new_a.pop(0)
             print(new_a)
-            if(len(new_a) > 0):
-                print("Greater than 0")
-                if(i+1 == new_a[1]):
-                    new_a.pop(1)
-                    print("Popping consecutive same 2 elements")
-                else:
-                    print("In else")
             if(len(new_a) == 0):
                 return moves
 
