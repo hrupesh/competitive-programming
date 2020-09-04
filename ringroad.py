@@ -8,8 +8,7 @@ new_a = []
 
 for i in range(len(a)):
     # print(a[i],i)
-    a[i] = int(a[i])
-    if(a[i] % 2 == 0):
+    if(int(a[i],base=36) % 2 == 0):
         new_a.append(a[i])
 
 print(new_a)
