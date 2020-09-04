@@ -17,10 +17,11 @@ print(new_a)
 def move(moves):
     for i in range(n):
         print(i+1)
-        # if()
+        if(i+1 == new_a[0]):
+            new_a.pop(0)
         moves = moves + 1
 
-    if(moves == n):
+    if(len(new_a) == 0):
         return moves
     move(moves)
 
@@ -28,4 +29,6 @@ def move(moves):
 moves = move(0)
 print("Moves made : "+str(moves))
 
-print(a)
+print(new_a)
+
+# print(a)
