@@ -8,15 +8,16 @@ new_a = []
 
 for i in range(len(a)):
     # print(a[i],i)
-    if(int(a[i],base=36) % 2 == 0):
-        new_a.append(a[i])
+    if(i % 2 == 0):
+        new_a.append(int(a[i]))
 
 print(new_a)
 
 
 def move(moves):
     for i in range(n):
-        print(i)
+        print(i+1)
+        # if()
         moves = moves + 1
 
     if(moves == n):
