@@ -16,18 +16,18 @@ for i in range(len(a)):
 
 def move(moves):
     for i in range(n):
-        # print(i+1)
+        print(i+1)
         moves = moves + 1
         if(i+1 == new_a[0]):
-            print(new_a)
             new_a.pop(0)
-            if(len(new_a) > 1):
-                print("Greater than 1")
-                for z in range(len(new_a)):
-                    if(i+1 == new_a[z]):
-                        new_a.pop(z)
-                    else:
-                        return moves
+            print(new_a)
+            if(len(new_a) > 0):
+                print("Greater than 0")
+                if(i+1 == new_a[1]):
+                    new_a.pop(1)
+                    print("Popping consecutive same 2 elements")
+                else:
+                    print("In else")
             if(len(new_a) == 0):
                 return moves
 
@@ -42,6 +42,6 @@ def move(moves):
 mo = move(0)
 print(mo-1)
 
-# print(new_a)
+print(new_a)
 
 # print(a)
