@@ -4,18 +4,18 @@ m = int(m)
 
 a = input()
 
-print(a)
+# print(a)
 
-a = a.split()
+a = [int(i) for i in a.split()]
 
-print(a)
+# print(a)
 
-new_a = []
+new_a = a
 
-for i in range(len(a)):
-    # print(a[i],i)
-    if(i % 2 == 0):
-        new_a.append(int(a[i]))
+# for i in range(len(a)):
+#     # print(a[i],i)
+#     if(i % 2 == 0):
+#         new_a.append(int(a[i]))
 
 # print(new_a)
 
