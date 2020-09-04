@@ -23,12 +23,14 @@ def move(moves):
             print("Popping")
         if(len(new_a) == 0):
             return moves
+        else:
+            move(moves)
 
-    # move(moves)
+    return moves
 
 
 moves = move(0)
-print("Moves made : "+str(moves-1))
+print("Moves made : ", moves-1)
 
 print(new_a)
 
