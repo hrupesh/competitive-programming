@@ -21,16 +21,19 @@ def move(moves):
         if(i+1 == new_a[0]):
             new_a.pop(0)
             print("Popping")
-        if(len(new_a) == 0):
-            return moves
-        else:
-            move(moves)
+            if(len(new_a) == 0):
+                return moves
+
+     if(len(new_a) == 0):
+                return moves
+    else:
+        move(moves)
 
     return moves
 
 
-moves = move(0)
-print("Moves made : ", moves-1)
+mo = move(0)
+print("Moves made : ", mo-1)
 
 print(new_a)
 
