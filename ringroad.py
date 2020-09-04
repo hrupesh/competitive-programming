@@ -15,14 +15,14 @@ print(new_a)
 
 
 def move(moves):
-        try:
-            for i in range(n):
-                print(i+1)
-                if(i+1 == new_a[0]):
-                    new_a.pop(0)
-                moves = moves + 1
-        except:
-            return moves
+    try:
+        for i in range(n):
+            print(i+1)
+            if(i+1 == new_a[0]):
+                new_a.pop(0)
+            moves = moves + 1
+    except:
+        return moves
 
     if(len(new_a) == 0):
         return moves
