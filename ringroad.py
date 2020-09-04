@@ -20,6 +20,7 @@ def move(moves):
             print(i+1)
             if(i+1 == new_a[0]):
                 new_a.pop(0)
+                print("Popping")
             moves = moves + 1
     except:
         return moves
