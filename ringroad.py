@@ -24,12 +24,12 @@ def move(moves):
             if(len(new_a) == 0):
                 return moves
 
-     if(len(new_a) == 0):
-                return moves
-    else:
-        move(moves)
+    if(len(new_a) == 0):
+        return moves
+    # else:
+    #     move(moves)
 
-    return moves
+    return move(moves)
 
 
 mo = move(0)
