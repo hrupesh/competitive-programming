@@ -10,4 +10,7 @@ for i in range(w):
 
 # print(total)
 
-print(total - n)
+if(total == 0):
+    print(total)
+else:
+    print(total - n)
