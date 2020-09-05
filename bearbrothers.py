@@ -4,12 +4,11 @@ b = int(b)
 
 years = 0
 
-for(i in range(b)):
+for i in range(b):
     a = a*3
     b = b*2
-    if(a > b){
+    if(a > b):
         years = i
         break
-    }
-    
+
 print(years)
