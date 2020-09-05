@@ -6,9 +6,8 @@ w = int(w)
 total = 0
 
 for i in range(w):
-    total =  k*i+1
-    print(total,i)
+    total = total + k*(i+1)
 
-print(total)
+# print(total)
 
-print(k, n, w)
+print(total - n)
