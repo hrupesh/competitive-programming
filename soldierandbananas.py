@@ -8,7 +8,7 @@ total = 0
 for i in range(w):
     total = total + k*(i+1)
 
-print(total)
+# print(total)
 
 needed = total - n
 
