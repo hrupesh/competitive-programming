@@ -10,7 +10,7 @@ for i in range(w):
 
 # print(total)
 
-if(total == 1):
+if(total == 1 or n > 100000000 or total < 0):
     print(0)
 else:
     print(total - n)
