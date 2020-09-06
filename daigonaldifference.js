@@ -35,10 +35,15 @@ function diagonalDifference(arr) {
 
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr[i].length; j++) {
-      ws.write(arr[i][j]);
+      // console.log(arr[i][j])
+      // console.log(i, j)
+      if (i == j) {
+        sum1 += arr[i][j];
+      }
     }
-    ws.write("\n");
   }
+
+  console.log(sum1);
 
   var diff = Math.abs(sum1 - sum2);
 
