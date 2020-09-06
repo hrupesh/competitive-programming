@@ -8,7 +8,7 @@ for i in range(b):
     a = a*3
     b = b*2
     if(a > b):
-        years = i
+        years = i + 1
         break
 
 print(years)
