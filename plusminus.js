@@ -25,7 +25,21 @@ function readLine() {
 
 // Complete the plusMinus function below.
 function plusMinus(arr) {
-  console.log(arr);
+  var positive = 0;
+  var negative = 0;
+  var zeroes = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      positive += 1;
+    } else if (arr[i] < 0) {
+      negative += 1;
+    } else {
+      zeroes += 1;
+    }
+  }
+
+  console.log(positive, negative, zeroes);
 }
 
 function main() {
