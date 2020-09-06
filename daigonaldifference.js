@@ -40,10 +40,17 @@ function diagonalDifference(arr) {
       if (i == j) {
         sum1 += arr[i][j];
       }
+
+      if (i == arr.length - j - 1) {
+        sum2 += arr[i][j];
+        console.log(i, j);
+        console.log(arr[i][j]);
+      }
     }
   }
 
   console.log(sum1);
+  console.log(sum2);
 
   var diff = Math.abs(sum1 - sum2);
 
