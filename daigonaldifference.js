@@ -1,25 +1,25 @@
-'use strict';
+"use strict";
 
-const fs = require('fs');
+const fs = require("fs");
 
 process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+process.stdin.setEncoding("utf-8");
 
-let inputString = '';
+let inputString = "";
 let currentLine = 0;
 
-process.stdin.on('data', function (inputStdin) {
-    inputString += inputStdin;
+process.stdin.on("data", function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function () {
-    inputString = inputString.split('\n');
+process.stdin.on("end", function () {
+  inputString = inputString.split("\n");
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
 /*
@@ -30,35 +30,38 @@ function readLine() {
  */
 
 function diagonalDifference(arr) {
-    var sum1 = 0
-    var sum2 = 0
+  var sum1 = 0;
+  var sum2 = 0;
 
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[i].length; j++) {
-            ws.write(arr[i][j])
-        }
-        ws.write("\n")
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      ws.write(arr[i][j]);
     }
+    ws.write("\n");
+  }
 
-    var diff = Math.abs(sum1 - sum2)
+  var diff = Math.abs(sum1 - sum2);
 
-    return diff
+  return diff;
 }
 
 function main() {
-    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+  const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
-    const n = parseInt(readLine().trim(), 10);
+  const n = parseInt(readLine().trim(), 10);
 
-    let arr = Array(n);
+  let arr = Array(n);
 
-    for (let i = 0; i < n; i++) {
-        arr[i] = readLine().replace(/\s+$/g, '').split(' ').map(arrTemp => parseInt(arrTemp, 10));
-    }
+  for (let i = 0; i < n; i++) {
+    arr[i] = readLine()
+      .replace(/\s+$/g, "")
+      .split(" ")
+      .map((arrTemp) => parseInt(arrTemp, 10));
+  }
 
-    const result = diagonalDifference(arr);
+  const result = diagonalDifference(arr);
 
-    ws.write(result + '\n');
+  ws.write(result + "\n");
 
-    ws.end();
+  ws.end();
 }
