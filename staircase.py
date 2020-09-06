@@ -1,24 +1,41 @@
-#!/bin/python3
+'use strict'
 
-import math
-import os
-import random
-import re
-import sys
+process.stdin.resume()
+process.stdin.setEncoding('utf-8')
 
-# Complete the staircase function below.
+let inputString = ''
+let currentLine = 0
 
+process.stdin.on('data', inputStdin= > {
+    inputString += inputStdin
+})
 
-def staircase(n):
-    for i in range(n):
-        for k in range(i):
-              print("$", end="")
-        for j in range(i+1):
-            print("#", end="")
-        print(" ")
+process.stdin.on('end', _= > {
+    inputString = inputString.replace( /\s *$/, '')
+    .split('\n')
+        .map(str = > str.replace( /\s *$/, ''))
 
+    main()
+})
 
-if __name__ == '__main__':
-    n = int(input())
+function readLine() {
+    return inputString[currentLine++]
+}
+
+// Complete the staircase function below.
+function staircase(n) {
+    var line = Array(n + 1).fill(' ')
+    line[n] = '\n'
+    for (var i=n - 1
+         i >= 0
+         i--) {
+        line[i] = '#'
+        process.stdout.write(line.join(''))
+    }
+}
+
+function main() {
+    const n = parseInt(readLine(), 10)
 
     staircase(n)
+}
