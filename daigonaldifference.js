@@ -34,27 +34,14 @@ function diagonalDifference(arr) {
   var sum2 = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[i].length; j++) {
-      // console.log(arr[i][j])
-      // console.log(i, j)
-      if (i == j) {
-        sum1 += arr[i][j];
-      }
+    var sum1 = 0;
+    var sum2 = 0;
 
-      if (i == arr.length - j - 1) {
-        sum2 += arr[i][j];
-        console.log(i, j);
-        console.log(arr[i][j]);
-      }
-    }
+    sum1 += arr[i][i];
+    sum2 += arr[i][arr.length - i - 1];
   }
 
-  console.log(sum1);
-  console.log(sum2);
-
-  var diff = Math.abs(sum1 - sum2);
-
-  return diff;
+  return Math.abs(sum1 - sum2);
 }
 
 function main() {
