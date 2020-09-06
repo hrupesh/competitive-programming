@@ -43,7 +43,9 @@ function plusMinus(arr) {
   negative = negative / arr.length;
   zeroes = zeroes / arr.length;
 
-  console.log(positive, negative, zeroes);
+  console.log(positive);
+  console.log(negative);
+  console.log(zeroes);
 }
 
 function main() {
