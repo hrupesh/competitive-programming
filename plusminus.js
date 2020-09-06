@@ -38,10 +38,12 @@ function plusMinus(arr) {
       zeroes += 1;
     }
   }
-
   positive = positive / arr.length;
+  positive.toFixed(6);
   negative = negative / arr.length;
+  negative.toFixed(6);
   zeroes = zeroes / arr.length;
+  zeroes.toFixed(6);
 
   console.log(positive);
   console.log(negative);
