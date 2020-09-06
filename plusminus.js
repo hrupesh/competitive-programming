@@ -39,6 +39,10 @@ function plusMinus(arr) {
     }
   }
 
+  positive = positive / arr.length;
+  negative = negative / arr.length;
+  zeroes = zeroes / arr.length;
+
   console.log(positive, negative, zeroes);
 }
 
