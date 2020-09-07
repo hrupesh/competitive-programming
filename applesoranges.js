@@ -24,7 +24,22 @@ function readLine() {
 }
 
 // Complete the countApplesAndOranges function below.
-function countApplesAndOranges(s, t, a, b, apples, oranges) {}
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+    var apple_count = 0
+    var oranges_count = 0
+
+    for (let i = 0; i < apples.length; i++) {
+        var pos = 0
+        pos = a + apples[i]
+        if (pos >= s && pos <= t) {
+            apple_count += 1
+        }
+    }
+    console.log(apple_count)
+
+
+    return 0
+}
 
 function main() {
   const st = readLine().split(" ");
