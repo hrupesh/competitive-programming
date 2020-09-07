@@ -29,7 +29,25 @@ function readLine() {
  * The function accepts INTEGER_ARRAY candles as parameter.
  */
 
-function birthdayCakeCandles(candles) {}
+function birthdayCakeCandles(candles) {
+  var max = candles[0];
+
+  for (let i = 0; i < candles.length; i++) {
+    if (candles[i] > max) {
+      max = candles[i];
+    }
+  }
+
+  max_is = 1;
+
+  for (let j = 0; j < candles.length; j++) {
+    if (candles[j] === max) {
+      max_is += 1;
+    }
+  }
+
+  return max, max_is;
+}
 
 function main() {
   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
