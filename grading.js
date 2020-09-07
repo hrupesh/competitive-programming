@@ -30,19 +30,18 @@ function readLine() {
  */
 
 function gradingStudents(grades) {
-  for (let i = 0; i < grades.length; i++) {
-    var multiple = 0;
-    for (let j = 0; j < 5; j++) {
-      if ((grades[i] + j) % 5 == 0) {
-        console.log(grades[i], grades[i] + j);
-        multiple = grades[i] + j;
-        if (multiple - grades[i] < 3) {
-          grades[i] = multiple;
+    for (let i = 0; i < grades.length; i++) {
+        var multiple = 0
+        for (let j = 0; j < 5; j++) {
+            if ((grades[i] + j) % 5 == 0) {
+                multiple = grades[i] + j
+                if (multiple - grades[i] < 3 && grades[i] > 37) {
+                    grades[i] = multiple
+                }
+            }
         }
-      }
     }
-  }
-  return grades;
+    return grades
 }
 
 function main() {
