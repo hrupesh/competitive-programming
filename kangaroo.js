@@ -35,6 +35,9 @@ function kangaroo(x1, v1, x2, v2) {
       return "YES";
     }
     moves += 1;
+    if (moves == 10000) {
+      return "NO";
+    }
   }
 }
 
