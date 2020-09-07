@@ -38,7 +38,7 @@ function birthdayCakeCandles(candles) {
     }
   }
 
-  max_is = 1;
+  var max_is = 0;
 
   for (let j = 0; j < candles.length; j++) {
     if (candles[j] === max) {
@@ -46,7 +46,7 @@ function birthdayCakeCandles(candles) {
     }
   }
 
-  return max, max_is;
+  return max_is;
 }
 
 function main() {
