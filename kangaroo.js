@@ -26,7 +26,17 @@ function readLine() {
 }
 
 // Complete the kangaroo function below.
-function kangaroo(x1, v1, x2, v2) {}
+function kangaroo(x1, v1, x2, v2) {
+  var moves = 0;
+  while (true) {
+    x1 += v1;
+    x2 += v2;
+    if (x1 == x2) {
+      return "YES";
+    }
+    moves += 1;
+  }
+}
 
 function main() {
   const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
