@@ -32,18 +32,18 @@ function readLine() {
  */
 
 function getTotalX(a, b) {
-    var X = []
-    var n = a[a.length - 1]
-    for (let i = 0; i < a.length; i++) {
-        for (let j = 0; j < b.length; j++) {
-            if (n % a[i] == 0) {
-                if (n % b[i] == 0) {
-                    X.push(n)
-                }
-            }
+  var X = [];
+  var n = a[a.length - 1];
+  for (let i = 0; i < a.length; i++) {
+    for (let j = 0; j < b.length; j++) {
+      if (n % a[i] == 0) {
+        if (n % b[i] == 0) {
+          X.push(n);
         }
+      }
     }
-    return n
+  }
+  return n;
 }
 
 function main() {
