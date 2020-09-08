@@ -32,42 +32,59 @@ function readLine() {
  */
 
 function getTotalX(a, b) {
-  var X = [];
-  var n = a[a.length - 1];
-  var okay = true;
+    var X = []
+    var n = a[a.length - 1]
+    var okay = true
 
-  for (let i = 0; i < a.length; i++) {
-    if (n % a[i] == 0) {
-      for (let j = 0; j < b.length; j++) {
-        if (!(b[i] % n == 0)) {
-          okay = false;
+    for (let i = 0; i < a.length; i++) {
+        if (n % a[i] == 0) {
+            for (let j = 0; j < b.length; j++) {
+                if (!(b[i] % n == 0)) {
+                    okay = false
+                }
+            }
         }
-      }
     }
-  }
 
-  if (okay) {
-    X.push(n);
-  }
-  // 2 4
-  // 16 32 96
-
-  var n2 = a[0] * a[1];
-  var okay2 = false;
-  if (n2 < b[0]) {
-    for (let i = 0; i < b.length; i++) {
-      if (b[i] % n2 == 0) {
-        okay2 = true;
-      } else {
-        okay2 = false;
-      }
+    if (okay) {
+        X.push(n)
     }
-  }
-  if (okay2) {
-    X.push(n2);
-  }
 
-  return X;
+    var n2 = a[0] * a[1]
+    var okay2 = false
+    if (n2 < b[0]) {
+        for (let i = 0; i < b.length; i++) {
+            if (b[i] % n2 == 0) {
+                okay2 = true
+            } else {
+                okay2 = false
+            }
+        }
+    }
+    if (okay2) {
+        X.push(n2)
+    }
+
+    var n3 = b[0]
+    var okay3 = false
+
+    for (let i = 0; i < a.length; i++) {
+        if (n3 % a[i] == 0) {
+            for (let j = 0; j < b.length; j++) {
+                if (b[i] % n == 0) {
+                    okay3 = true
+                } else {
+                    okay3 = false
+                }
+            }
+        }
+    }
+
+    if (okay3) {
+        X.push(n3)
+    }
+
+    return X
 }
 
 function main() {
