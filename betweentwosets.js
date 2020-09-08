@@ -32,7 +32,8 @@ function readLine() {
  */
 
 function getTotalX(a, b) {
-  // Write your code here
+  let X = a[0] * a[1];
+  return X;
 }
 
 function main() {
