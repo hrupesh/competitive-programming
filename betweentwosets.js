@@ -42,23 +42,23 @@ function getTotalX(a, b) {
     i++;
   }
 
-  var newX = []
+  var newX = [];
 
   X.forEach((i) => {
-      b.forEach((j) => {
-          if (i > j) {
-              if (i % j == 0) {
-                  newX.push(i)
-              }
-          } else {
-              if (j % i == 0) {
-                  newX.push(i)
-              }
-          }
-      })
-  })
+    b.forEach((j) => {
+      if (i > j) {
+        if (i % j == 0) {
+          newX.push(i);
+        }
+      } else {
+        if (j % i == 0) {
+          newX.push(i);
+        }
+      }
+    });
+  });
 
-  return newX
+  return newX;
 }
 
 function main() {
