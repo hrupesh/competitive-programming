@@ -46,17 +46,13 @@ function getTotalX(a, b) {
 
   X.forEach((i) => {
     b.forEach((j) => {
-      if (i > j) {
-        if (i % j == 0) {
-          newX.push(i);
-        }
-      } else {
-        if (j % i == 0) {
-          newX.push(i);
-        }
+      if (j % i == 0) {
+        newX.push(i);
       }
     });
   });
+
+  return newX;
 
   return newX;
 }
