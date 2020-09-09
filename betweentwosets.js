@@ -33,14 +33,14 @@ function readLine() {
 
 function getTotalX(a, b) {
   var X = [];
-  var n = a[a.length - 1]
-    var i = 1
-    while (n <= b[0]) {
-        n = n * i
-        X.push(n)
-        i++
-    }
-    // return X
+  var n = a[a.length - 1];
+  var i = 1;
+  while (n <= b[0]) {
+    n = n * i;
+    X.push(n);
+    i++;
+  }
+  // return X
 }
 
 function main() {
