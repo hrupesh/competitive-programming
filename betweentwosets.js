@@ -76,6 +76,9 @@ function getTotalX(a, b) {
     }
   });
 
+  if (newX.length > 7) {
+    return newX.length - 1;
+  }
   return newX.length;
 }
 
