@@ -1,6 +1,6 @@
 seq = {}
 
-n, q = map(int, input().split(" "))
+n, q = map(int, raw_input().split(" "))
 
 lastans = 0
 
@@ -18,12 +18,12 @@ def two(x, y, lastans):
     temp = (x ^ lastans) % n
     pos = y % len(seq[temp])
     lastans = seq[temp][pos]
-    print(lastans)
+    print lastans
     return lastans
 
 
 for x in range(q):
-    val, x, y = map(int, input().split(" "))
+    val, x, y = map(int, raw_input().split(" "))
     if (val == 1):
         lastans = one(x, y, lastans)
     else:
