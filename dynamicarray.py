@@ -1,34 +1,26 @@
-n, q = input().split()
+seq = {}
 
-n = int(n)
-q = int(q)
-# print(n, q)
+n, q = map(int, raw_input().split(" "))
 
-queries = []
+lastans = 0
 
-for i in range(q):
-    queries.append(input().split())
+def one(x, y, lastans):
+	temp = (x ^ lastans) % n
+	if temp not in seq:
+		seq[temp] = [y]
+	else:
+		seq[temp] = seq[temp] + [y]
+	return lastans
 
-for i in range(len(queries)):
-    for j in range(3):
-        queries[i][j] = int(queries[i][j])
+def two(x, y, lastans):
+	temp = (x ^ lastans) % n
+	pos = y % len(seq[temp])
+	lastans = seq[temp][pos]
+	print lastans
+	return lastans
 
-# print(queries)
 
-lastAnswer = 0
-answers = []
-seqList = []
-for i in range(n):
-    seqList.append([])
-for i in range(len(queries)):
-    if (queries[i][0] == 1):
-        x = queries[i][1]
-        index = (x ^ lastAnswer) % 2
-        seqList[index].append(queries[i][2])
-    elif (queries[i][0] == 2):
-        x = queries[i][1]
-        index = (x ^ lastAnswer) % 2
-        elem_index = queries[i][2] % len(seqList[index])
-        lastAnswer = seqList[index][elem_index]
-        answers.append(lastAnswer)
-        print(lastAnswer)
+for x in range(q):
+	val, x, y = map(int, raw_input().split(" "))
+	if (val == 1): lastans = one(x, y, lastans)
+	else: lastans = two(x, y, lastans)
