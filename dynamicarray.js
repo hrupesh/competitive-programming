@@ -32,7 +32,13 @@ function readLine() {
  */
 
 function dynamicArray(n, queries) {
-  // Write your code here
+    var lastAnswer = 0
+    var seqList = []
+    for (let i = 0; i < n; i++) {
+        seqList.push([])
+    }
+    console.log(seqList)
+    return seqList
 }
 
 function main() {
