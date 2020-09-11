@@ -23,9 +23,8 @@ n = int(n)
 d = int(d)
 arr = []
 
-for i in range(n):
-    t = int(input())
-    arr.append(t)
+t = input().split(" ")
+arr.append(t)
 
 res = rotateLeft(d, arr)
 
