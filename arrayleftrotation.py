@@ -18,11 +18,12 @@ import sys
 
 def rotateLeft(d, arr):
     for i in range(len(arr)):
-        if(i == 0):
-            arr[len(arr)-1] = arr[i]
-        else:
+        if(i > 0):
             arr[i-1] = arr[i]
+        elif(i == 0):
+            temp = arr[i]
 
+    arr[len(arr)-1] = temp
     return arr
 
 
