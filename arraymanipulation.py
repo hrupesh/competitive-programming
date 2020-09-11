@@ -7,6 +7,8 @@ import re
 import sys
 
 # Complete the arrayManipulation function below.
+
+
 def arrayManipulation(n, queries):
     arr = [0]*n
     for i in queries:
@@ -20,6 +22,7 @@ def arrayManipulation(n, queries):
         if itt > maxval:
             maxval = itt
     return maxval
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
