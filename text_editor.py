@@ -28,9 +28,7 @@ for i in q:
         if(len(S) > k-1):
             print(S[k-1])
     else:
-        print("Before pushing:",S,stack)
         S = stack.pop()
-        print("In else:",S,stack)
 
 
 # print(S, stack)
