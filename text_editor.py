@@ -22,9 +22,15 @@ for i in q:
     elif(i[0] == 2):
         d = int(i[1])
         S = S[:-d]
-        stack.append(S[:-d])
+        # stack.append(S[:-d])
     elif(i[0] == 3):
         k = int(i[1])
-        print(S[k])
+        if(len(S) > k-1):
+            print(S[k-1])
+    else:
+        print("Before pushing:",S,stack)
+        S = stack.pop()
+        print("In else:",S,stack)
 
-print(S, stack)
+
+# print(S, stack)
