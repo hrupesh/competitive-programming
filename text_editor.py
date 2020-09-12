@@ -22,6 +22,9 @@ for i in q:
     elif(i[0] == 2):
         d = int(i[1])
         S = S[:-d]
-        stack.append(i[1])
+        stack.append(S[:-d])
+    elif(i[0] == 3):
+        k = int(i[1])
+        print(S[k])
 
 print(S, stack)
