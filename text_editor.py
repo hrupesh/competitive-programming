@@ -13,5 +13,15 @@ for i in range(n):
     t = int(t)
     q.append([t, w])
 
+stack = [""]
+
 for i in q:
-    print(i[0], i[1])
+    if(i[0] == 1):
+        S += i[1]
+        stack.append(i[1])
+    elif(i[0] == 2):
+        d = int(i[1])
+        S = S[:-d]
+        stack.append(i[1])
+
+print(S, stack)
