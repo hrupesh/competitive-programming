@@ -85,7 +85,7 @@ class LinkedList:
         itr = self.head
         while itr:
             if count == index - 1:
-                node = Node(data,itr.next.next)
+                node = Node(data, itr.next)
                 itr.next = node
                 break
 
@@ -95,15 +95,7 @@ class LinkedList:
 
 if __name__ == "__main__":
     L = LinkedList()
-    L.insert_values([1, 2, 1, 1])
-    L.insert_at_begining(1)
-    L.insert_at_end(4)
     L.insert_multiple([3, 4, 5, 6])
-    L.print()
-    print(L.length())
-    L.remove_at(0)
-    L.remove_at(4)
-    L.print()
-    L.insert_at(846, 4)
+    L.insert_at(0, 2)
     L.print()
     print(L.length())
