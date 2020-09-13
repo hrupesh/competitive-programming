@@ -96,6 +96,6 @@ class LinkedList:
 if __name__ == "__main__":
     L = LinkedList()
     L.insert_multiple([3, 4, 5, 6])
-    L.insert_at(0, 2)
+    L.insert_at(1, 3.5)
     L.print()
     print(L.length())
