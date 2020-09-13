@@ -72,6 +72,10 @@ class LinkedList:
 
             itr = itr.next
             count += 1
+            
+    def insert_at(self,index,data):
+        if index < 0 or index >= self.length():
+            raise Exception(f'Invalid index {index}')
 
 
 if __name__ == "__main__":
@@ -84,5 +88,7 @@ if __name__ == "__main__":
     print(L.length())
     L.remove_at(0)
     L.remove_at(4)
+    L.print()
+    L.insert_at(846)
     L.print()
     print(L.length())
