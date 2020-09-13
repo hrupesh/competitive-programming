@@ -83,6 +83,6 @@ if __name__ == "__main__":
     L.print()
     print(L.length())
     L.remove_at(0)
-    L.remove_at(5)
+    L.remove_at(4)
     L.print()
     print(L.length())
