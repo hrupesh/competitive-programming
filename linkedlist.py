@@ -18,7 +18,7 @@ class LinkedList:
             return
 
         itr = self.head
-        while itr:
+        while itr.next:
             itr = itr.next
 
         itr.next = Node(data, None)
@@ -41,8 +41,8 @@ class LinkedList:
 
 if __name__ == "__main__":
     L = LinkedList()
-    L.insert_at_begining(1)
     L.insert_at_begining(2)
-    L.insert_at_begining(3)
-    L.insert_at_begining(4)
+    L.insert_at_begining(1)
+    L.insert_at_end(3)
+    L.insert_at_end(4)
     L.print()
