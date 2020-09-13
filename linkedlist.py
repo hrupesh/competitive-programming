@@ -27,8 +27,8 @@ class LinkedList:
         self.head = None
         for i in list:
             self.insert_at_end(i)
-            
-    def insert_multiple(self,list):
+
+    def insert_multiple(self, list):
         for i in list:
             self.insert_at_end(i)
 
@@ -42,7 +42,6 @@ class LinkedList:
 
         while itr:
             ll += str(itr.data)+' --> ' if itr.next else str(itr.data)
-            # ll += itr.next ? str(itr.data) + '-->': str(itr.data)
             itr = itr.next
 
         print(ll)
@@ -55,5 +54,5 @@ if __name__ == "__main__":
     L.insert_at_begining(1)
     L.insert_at_end(3)
     L.insert_at_end(4)
-    L.insert_multiple([3,4,5,6])
+    L.insert_multiple([3, 4, 5, 6])
     L.print()
