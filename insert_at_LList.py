@@ -24,9 +24,9 @@ class LinkedList:
         for i in list:
             self.insert_at_end(i)
 
-     def insert_at(self, index, data):
-            if index < 0 or index >= self.length():
-            raise Exception(f'Invalid index {index}')
+    def insert_at(self, index, data):
+        if index < 0 or index >= self.length():
+        raise Exception(f'Invalid index {index}')
 
         if index == 0:
             self.insert_at_begining(data)
@@ -43,21 +43,22 @@ class LinkedList:
             count += 1
             itr = itr.next
 
+
 if __name__ == "__main__":
     L = LinkedList()
-    
+
     n = int(input())
-    
+
     elems = []
-    
+
     for i in range(n):
         t = input()
         elems.append(t)
-        
+
     data = input()
-    
+
     pos = input()
-    
+
     L.insert_multiple(elems)
     L.insert_at(pos, data)
     L.print()
