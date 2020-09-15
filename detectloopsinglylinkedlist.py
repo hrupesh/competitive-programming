@@ -46,13 +46,11 @@ def has_cycle(head):
     itr = llist.head
     addr = []
     while itr:
-        print(addr)
-        addr.append(itr.next)
         if itr.next in addr:
-            break
-        itr = itr.next
+            return 1
 
-    print(addr)
+        addr.append(itr.next)
+        itr = itr.next
 
     return 0
 
