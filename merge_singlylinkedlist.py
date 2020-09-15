@@ -6,10 +6,12 @@ import random
 import re
 import sys
 
+
 class SinglyLinkedListNode:
     def __init__(self, node_data):
         self.data = node_data
         self.next = None
+
 
 class SinglyLinkedList:
     def __init__(self):
@@ -24,8 +26,8 @@ class SinglyLinkedList:
         else:
             self.tail.next = node
 
-
         self.tail = node
+
 
 def print_singly_linked_list(node, sep, fptr):
     while node:
@@ -42,6 +44,6 @@ def mergeLists(head1, head2):
     llist2 = SinglyLinkedList()
     llist1.head = head1
     llist2.head = head2
-    
+
 
 if __name__ == '__main__':
