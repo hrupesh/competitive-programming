@@ -6,12 +6,10 @@ import random
 import re
 import sys
 
-
 class SinglyLinkedListNode:
     def __init__(self, node_data):
         self.data = node_data
         self.next = None
-
 
 class SinglyLinkedList:
     def __init__(self):
@@ -26,8 +24,8 @@ class SinglyLinkedList:
         else:
             self.tail.next = node
 
-        self.tail = node
 
+        self.tail = node
 
 def print_singly_linked_list(node, sep, fptr):
     while node:
@@ -44,13 +42,19 @@ def removeDuplicates(head):
     llist.head = head
 
     itr = llist.head
-    while itr.next:
-        if itr.data == itr.next.data:
-            itr.next = itr.next.next
+    while itr:
+        print(itr.data)
+        if itr.next is not None:
+            if itr.data == itr.next.data:
+                print("Equal",itr.data,itr.next.data)
+                itr.next = itr.next.next
+                if itr.next is not None:
+                    if itr.data == itr.next.data:
+                        itr.next = itr.next.next
+                        
         itr = itr.next
 
     return llist.head
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
