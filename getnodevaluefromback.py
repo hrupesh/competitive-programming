@@ -50,12 +50,12 @@ def getNode(head, positionFromTail):
         itr = itr.next
 
     index = count - positionFromTail
-    print("INDEX:",index)
+    print("INDEX:", index)
     itr1 = llist.head
     count1 = 0
     data = 0
     while itr1:
-        if  count1 == index:
+        if count1 == index:
             return itr1.data
         count1 += 1
         itr1 = itr1.next
