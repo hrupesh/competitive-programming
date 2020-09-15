@@ -45,13 +45,26 @@ def mergeLists(head1, head2):
     llist1.head = head1
     llist2.head = head2
 
+    list1 = []
     itr = llist1.head
     while itr:
-        if itr.data == 3:
-            itr.next = llist2.head
+        list1.append(itr.data)
         itr = itr.next
 
-    return llist1.head
+    list2 = []
+    itr = llist2.head
+    while itr:
+        list2.append(itr.data)
+        itr = itr.next
+
+    list3 = list1 + list2
+    list3 = sorted(list3)
+
+    llist3 = SinglyLinkedList()
+    for i in list3:
+        llist3.insert_node(i)
+
+    return llist3.head
 
 
 if __name__ == '__main__':
