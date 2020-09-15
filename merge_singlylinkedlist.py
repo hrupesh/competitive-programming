@@ -40,7 +40,7 @@ def print_singly_linked_list(node, sep, fptr):
 
 
 def mergeLists(head1, head2):
-    llist = SinglyLinkedList()
+    llist1 = SinglyLinkedList()
     llist2 = SinglyLinkedList()
     llist1.head = head1
     llist2.head = head2
