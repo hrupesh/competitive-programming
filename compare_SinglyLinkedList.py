@@ -3,10 +3,12 @@
 import os
 import sys
 
+
 class SinglyLinkedListNode:
     def __init__(self, node_data):
         self.data = node_data
         self.next = None
+
 
 class SinglyLinkedList:
     def __init__(self):
@@ -21,8 +23,8 @@ class SinglyLinkedList:
         else:
             self.tail.next = node
 
-
         self.tail = node
+
 
 def print_singly_linked_list(node, sep, fptr):
     while node:
@@ -71,7 +73,7 @@ if __name__ == '__main__':
         for _ in range(llist1_count):
             llist1_item = int(input())
             llist1.insert_node(llist1_item)
-            
+
         llist2_count = int(input())
 
         llist2 = SinglyLinkedList()
