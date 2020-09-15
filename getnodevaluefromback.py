@@ -45,17 +45,18 @@ def getNode(head, positionFromTail):
 
     count = 0
     itr = llist.head
-    while itr:
+    while itr.next:
         count += 1
         itr = itr.next
 
     index = count - positionFromTail
+    print("INDEX:",index)
     itr1 = llist.head
     count1 = 0
     data = 0
     while itr1:
-        if count1 == index:
-            data = itr1.data
+        if  count1 == index:
+            return itr1.data
         count1 += 1
         itr1 = itr1.next
 
