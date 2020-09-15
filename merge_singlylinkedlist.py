@@ -45,6 +45,14 @@ def mergeLists(head1, head2):
     llist1.head = head1
     llist2.head = head2
 
+    # merge to linked lists
+    #  itr = llist1.head
+    # while itr:
+    #     if itr.next is None:
+    #         itr.next = llist2.head
+    #         break
+    #     itr = itr.next
+
     list1 = []
     itr = llist1.head
     while itr:
