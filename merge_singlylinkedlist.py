@@ -38,13 +38,19 @@ def print_singly_linked_list(node, sep, fptr):
         if node:
             fptr.write(sep)
 
-
 def mergeLists(head1, head2):
     llist = SinglyLinkedList()
     llist2 = SinglyLinkedList()
     llist1.head = head1
     llist2.head = head2
 
+    itr = llist1.head
+    while itr:
+        if itr.data == 3:
+            itr.next = llist2.head
+        itr = itr.next
+   
+    return llist1.head
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
