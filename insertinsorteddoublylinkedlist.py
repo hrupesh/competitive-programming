@@ -48,7 +48,7 @@ def sortedInsert(head, data):
     itr = llist.head
     while itr:
         if data < itr.data:
-            node = DoublyLinkedListNode()
+            node = DoublyLinkedListNode(data)
             node.next = itr
             node.prev = itr.prev
             itr.prev = node
