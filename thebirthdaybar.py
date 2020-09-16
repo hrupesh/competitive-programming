@@ -6,16 +6,24 @@ import random
 import re
 import sys
 
-
 def birthday(s, d, m):
-
+    
     ways = 0
 
-    for i in range(len(s)):
-        if i > 0:
-            if s[i-1] + s[i] == d:
-                ways += 1
+    t = []
 
+    for i in range(len(s)):
+        temp = 0
+        for j in range(m):
+            if i + j < len(s):
+                temp += s[i+j]
+        t.append(temp)
+    print(t)
+
+    for i in t:
+        if i == d:
+            ways += 1
+    
     return ways
 
 
