@@ -51,7 +51,7 @@ def reverse(head):
         l.append(itr.data)
         itr = itr.next
 
-    l = reverse(l)
+    l = l[::-1]
 
     reversedll = DoublyLinkedList()
     for i in l:
