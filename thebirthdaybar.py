@@ -6,8 +6,9 @@ import random
 import re
 import sys
 
+
 def birthday(s, d, m):
-    
+
     ways = 0
 
     for i in range(len(s)):
