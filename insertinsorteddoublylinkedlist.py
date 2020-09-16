@@ -45,19 +45,20 @@ def sortedInsert(head, data):
     llist = DoublyLinkedList()
     llist.head = head
 
+    l = []
     itr = llist.head
     while itr:
-        if data < itr.data:
-            node = DoublyLinkedListNode(data)
-            node.next = itr
-            node.prev = itr.prev
-            itr.prev = node
-            break
-        else:
-            print(data)
+        l.append(itr.data)
         itr = itr.next
 
-    return llist.head
+    l.append(data)
+    l = sorted(l)
+
+    newll = DoublyLinkedList()
+    for i in l:
+        newll.insert_node(i)
+
+    return newll.head
 
 
 if __name__ == '__main__':
