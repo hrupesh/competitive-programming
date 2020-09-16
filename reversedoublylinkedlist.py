@@ -6,11 +6,13 @@ import random
 import re
 import sys
 
+
 class DoublyLinkedListNode:
     def __init__(self, node_data):
         self.data = node_data
         self.next = None
         self.prev = None
+
 
 class DoublyLinkedList:
     def __init__(self):
@@ -26,8 +28,8 @@ class DoublyLinkedList:
             self.tail.next = node
             node.prev = self.tail
 
-
         self.tail = node
+
 
 def print_doubly_linked_list(node, sep, fptr):
     while node:
@@ -37,6 +39,7 @@ def print_doubly_linked_list(node, sep, fptr):
 
         if node:
             fptr.write(sep)
+
 
 def reverse(head):
     llist = DoublyLinkedList()
@@ -55,6 +58,7 @@ def reverse(head):
         reversedll.insert_node(i)
 
     return reversedll.head
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
