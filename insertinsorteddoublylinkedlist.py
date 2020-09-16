@@ -6,11 +6,13 @@ import random
 import re
 import sys
 
+
 class DoublyLinkedListNode:
     def __init__(self, node_data):
         self.data = node_data
         self.next = None
         self.prev = None
+
 
 class DoublyLinkedList:
     def __init__(self):
@@ -26,8 +28,8 @@ class DoublyLinkedList:
             self.tail.next = node
             node.prev = self.tail
 
-
         self.tail = node
+
 
 def print_doubly_linked_list(node, sep, fptr):
     while node:
@@ -38,8 +40,25 @@ def print_doubly_linked_list(node, sep, fptr):
         if node:
             fptr.write(sep)
 
+
 def sortedInsert(head, data):
     llist = DoublyLinkedList()
+    llist.head = head
+
+    itr = llist.head
+    while itr:
+        if data < itr.data:
+            node = DoublyLinkedListNode()
+            node.next = itr
+            node.prev = itr.prev
+            itr.prev = node
+            break
+        else:
+            print(data)
+        itr = itr.next
+
+    return llist.head
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
