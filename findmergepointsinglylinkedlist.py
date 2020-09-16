@@ -39,8 +39,35 @@ def print_singly_linked_list(node, sep, fptr):
             fptr.write(sep)
 
 
+
 def findMergeNode(head1, head2):
-    pass
+    llist1 = SinglyLinkedList()
+    llist2 = SinglyLinkedList()
+    llist1.head = head1
+    llist2.head = head2
+    list1 = set()
+    list2 = set()
+    itr = llist1.head
+    while itr:
+        list1.add(itr)
+        itr = itr.next
+
+    itr = llist2.head
+    while itr:
+        list2.add(itr)
+        itr = itr.next
+    
+    # print(list1)
+    # print(list2)
+
+    addr = None
+
+    for i in list1:
+        if i in list2:
+            addr = i
+
+    return addr.data
+
 
 
 if __name__ == '__main__':
