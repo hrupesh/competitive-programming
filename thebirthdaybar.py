@@ -28,7 +28,6 @@ def birthday(s, d, m):
     return ways
 
 
-
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
