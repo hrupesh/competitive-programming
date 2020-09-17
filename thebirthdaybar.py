@@ -6,8 +6,9 @@ import random
 import re
 import sys
 
+
 def birthday(s, d, m):
-    
+
     ways = 0
 
     t = []
@@ -23,8 +24,9 @@ def birthday(s, d, m):
     for i in t:
         if i == d:
             ways += 1
-    
+
     return ways
+
 
 
 if __name__ == '__main__':
