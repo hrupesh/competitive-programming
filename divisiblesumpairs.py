@@ -6,18 +6,15 @@ import random
 import re
 import sys
 
-# Complete the divisibleSumPairs function below.
-
-
 def divisibleSumPairs(n, k, ar):
-    
+
     pairs = []
     pos_pairs = []
 
     for i in range(n):
         for j in range(n):
-            if i < n -1 and i != j:
-                pos_pairs.append([ar[i],ar[j]])
+            if i < n - 1 and i != j:
+                pos_pairs.append([ar[i], ar[j]])
 
     print(pos_pairs)
 
@@ -25,7 +22,6 @@ def divisibleSumPairs(n, k, ar):
         print(i)
 
     return 0
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
