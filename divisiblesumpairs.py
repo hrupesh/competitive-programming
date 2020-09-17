@@ -6,7 +6,6 @@ import random
 import re
 import sys
 
-
 def divisibleSumPairs(n, k, ar):
     pairs = 0
 
@@ -17,7 +16,6 @@ def divisibleSumPairs(n, k, ar):
                     pairs += 1
 
     return pairs
-
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
