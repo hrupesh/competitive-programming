@@ -6,15 +6,16 @@ import random
 import re
 import sys
 
+
 def divisibleSumPairs(n, k, ar):
-    
+
     pairs = []
     pos_pairs = []
 
     for i in range(n):
         for j in range(n):
             if i != j:
-                pos_pairs.append([ar[i],ar[j]])
+                pos_pairs.append([ar[i], ar[j]])
 
     for i in pos_pairs:
         if (i[0]+i[1]) % k == 0 and i[0] < i[1]:
