@@ -8,22 +8,15 @@ import sys
 
 
 def divisibleSumPairs(n, k, ar):
+    pairs = 0
 
-    pairs = []
-    pos_pairs = []
-
-    for i in range(n):
-        for j in range(n):
+    for i in range(len(ar)):
+        for j in range(i+1, len(ar)):
             if i != j:
-                pos_pairs.append([ar[i], ar[j]])
+                if (ar[i]+ar[j]) % k == 0:
+                    pairs += 1
 
-    for i in pos_pairs:
-        if (i[0]+i[1]) % k == 0 and i[0] < i[1]:
-            pairs.append(i)
-
-    print(pairs)
-
-    return 0
+    return pairs
 
 
 if __name__ == '__main__':
