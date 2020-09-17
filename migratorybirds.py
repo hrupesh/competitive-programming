@@ -6,6 +6,7 @@ import random
 import re
 import sys
 
+
 def migratoryBirds(arr):
     b1 = 0
     b2 = 0
@@ -25,7 +26,7 @@ def migratoryBirds(arr):
         else:
             b5 += 1
 
-    s = [b1,b2,b3,b4,b5]
+    s = [b1, b2, b3, b4, b5]
     print(s)
 
     return 0
