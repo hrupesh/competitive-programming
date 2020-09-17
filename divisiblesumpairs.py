@@ -10,6 +10,21 @@ import sys
 
 
 def divisibleSumPairs(n, k, ar):
+    
+    pairs = []
+    pos_pairs = []
+
+    for i in range(n):
+        for j in range(n):
+            if i < n -1 and i != j:
+                pos_pairs.append([ar[i],ar[j]])
+
+    print(pos_pairs)
+
+    for i in pos_pairs:
+        print(i)
+
+    return 0
 
 
 if __name__ == '__main__':
