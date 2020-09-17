@@ -26,10 +26,29 @@ def migratoryBirds(arr):
         else:
             b5 += 1
 
-    s = [b1, b2, b3, b4, b5]
+    s = [b1,b2,b3,b4,b5]
     print(s)
 
-    return 0
+    max = s[0]
+    max_index = 0
+    for i in range(len(s)):
+        if s[i] > max:
+            max = s[i]
+            max_index = i
+
+    print(max_index,max)
+    if max_index == 0:
+        return 1
+    elif max_index == 1:
+        return 2
+    elif max_index == 2:
+        return 3
+    elif max_index == 3:
+        return 4
+    elif max_index == 4:
+        return 5
+    else:
+        return 0
 
 
 if __name__ == '__main__':
