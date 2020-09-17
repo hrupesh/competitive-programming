@@ -26,7 +26,7 @@ def migratoryBirds(arr):
         else:
             b5 += 1
 
-    s = [b1,b2,b3,b4,b5]
+    s = [b1, b2, b3, b4, b5]
     print(s)
 
     max = s[0]
@@ -36,7 +36,7 @@ def migratoryBirds(arr):
             max = s[i]
             max_index = i
 
-    print(max_index,max)
+    print(max_index, max)
     if max_index == 0:
         return 1
     elif max_index == 1:
