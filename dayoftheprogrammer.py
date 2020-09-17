@@ -16,7 +16,7 @@ def dayOfProgrammer(year):
         leap = True
 
     if leap:
-        return (f'13.09.{year}')
+        return (f'12.09.{year}')
     else:
         return (f'12.09.{year}')
 
