@@ -7,10 +7,12 @@ import re
 import sys
 
 # Complete the bonAppetit function below.
+
+
 def bonAppetit(bill, k, b):
     did_not_eat = bill[k]
     sum = 0
-    
+
 
 if __name__ == '__main__':
     nk = input().rstrip().split()
