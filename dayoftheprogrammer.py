@@ -7,6 +7,8 @@ import re
 import sys
 
 # Complete the dayOfProgrammer function below.
+
+
 def dayOfProgrammer(year):
     leap = False
 
@@ -23,6 +25,7 @@ def dayOfProgrammer(year):
         return (f'26.09.{year}')
     else:
         return (f'13.09.{year}')
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
