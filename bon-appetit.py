@@ -4,6 +4,7 @@ import random
 import re
 import sys
 
+
 def bonAppetit(bill, k, b):
     did_not_eat = bill[k]
     s = 0
@@ -17,6 +18,7 @@ def bonAppetit(bill, k, b):
         print("Bon Appetit")
     else:
         print(b - s)
+
 
 if __name__ == '__main__':
     nk = input().rstrip().split()
