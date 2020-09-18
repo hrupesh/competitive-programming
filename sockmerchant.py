@@ -6,10 +6,18 @@ import random
 import re
 import sys
 
+# Complete the sockMerchant function below.
 def sockMerchant(n, ar):
-    print(n)
+    ar = sorted(ar)
     print(ar)
-    return 0
+    pairs = 0
+    i = 0
+    while i < len(ar)-1:
+        print(ar[i],ar[i+1])
+        if ar[i] == ar[i+1]:
+            pairs += 1
+        i += 2
+    return pairs
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
