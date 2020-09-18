@@ -1,18 +1,22 @@
-#!/bin/python3
-
 import math
 import os
 import random
 import re
 import sys
 
-# Complete the bonAppetit function below.
-
-
 def bonAppetit(bill, k, b):
     did_not_eat = bill[k]
-    sum = 0
+    s = 0
+    for i in range(len(bill)):
+        if i != k:
+            s += bill[i]
 
+    s = s//2
+
+    if s == b:
+        print("Bon Appetit")
+    else:
+        print(b - s)
 
 if __name__ == '__main__':
     nk = input().rstrip().split()
