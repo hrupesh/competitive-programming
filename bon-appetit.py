@@ -6,7 +6,7 @@ import sys
 
 
 def bonAppetit(bill, k, b):
-    did_not_eat = bill[k]
+    # did_not_eat = bill[k]
     s = 0
     for i in range(len(bill)):
         if i != k:
