@@ -59,4 +59,3 @@ function main() {
 
   vowelsAndConsonants(s);
 }
-
