@@ -32,7 +32,6 @@ function getSecondLargest(nums) {
   while (i >= 0) {
     if (nums[i] < max) {
       return nums[i];
-      break;
     }
     i--;
   }
